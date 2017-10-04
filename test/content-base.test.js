@@ -2,8 +2,8 @@
 
 const path = require('path');
 const request = require('supertest');
-const helper = require('./helper');
-const config = require('./fixtures/contentbase-config/webpack.config');
+const helper = require('./lib/helper');
+const config = require('./fixtures/content-base/webpack.config');
 require('mocha-sinon');
 
 const contentBasePublic = path.join(__dirname, 'fixtures/contentbase-config/public');

@@ -42,6 +42,7 @@
   "dependencies": {
     "ansi-html": "0.0.7",
     "array-includes": "^3.0.3",
+    "ava": "^0.22.0",
     "bonjour": "^3.5.0",
     "chokidar": "^1.6.0",
     "compression": "^1.5.2",

@@ -1,8 +1,8 @@
 'use strict';
 
 const request = require('supertest');
-const helper = require('./helper');
-const config = require('./fixtures/simple-config/webpack.config');
+const helper = require('./lib/helper');
+const config = require('./fixtures/simple/webpack.config');
 
 describe('Compress', () => {
   let server;

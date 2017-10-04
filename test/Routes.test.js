@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 const request = require('supertest');
-const helper = require('./helper');
-const config = require('./fixtures/simple-config/webpack.config');
+const helper = require('./lib/helper');
+const config = require('./fixtures/simple/webpack.config');
 
 const directoryIndex = fs.readFileSync(path.join(__dirname, 'fixtures/directory-index.txt'), 'utf-8');
 const magicHtml = fs.readFileSync(path.join(__dirname, 'fixtures/magic-html.txt'), 'utf-8');
