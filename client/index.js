@@ -46,11 +46,15 @@ log.setDefaultLevel(INFO);
 
 // Send messages to the outside, so plugins can consume it.
 function sendMsg(type, data) {
+<<<<<<< HEAD
 	if(
 		typeof self !== "undefined" &&
 		(typeof WorkerGlobalScope === "undefined" ||
 		!(self instanceof WorkerGlobalScope))
 	) {
+=======
+	if(typeof self !== "undefined") {
+>>>>>>> parent of ccc8163... Fix exception when client script is used in webworkers (#813)
 		self.postMessage({
 			type: "webpack" + type,
 			data: data
@@ -193,7 +197,7 @@ function reloadApp() {
 		log.info("[WDS] App hot update...");
 		var hotEmitter = require("webpack/hot/emitter");
 		hotEmitter.emit("webpackHotUpdate", currentHash);
-		if(typeof self !== "undefined" && self.window) {
+		if(typeof self !== "undefined") {
 			// broadcast update to window
 			self.postMessage("webpackHotUpdate" + currentHash, "*");
 		}
