@@ -342,7 +342,7 @@ function processOptions(webpackOptions) {
   options.port = argv.port === DEFAULT_PORT ? defaultTo(options.port, argv.port) : defaultTo(argv.port, options.port);
 
   if (options.port != null) {
-    startDevServer(webpackOptions, options);
+    startDevServer(wpOpt, options);
     return;
   }
 
@@ -350,7 +350,7 @@ function processOptions(webpackOptions) {
   portfinder.getPort((err, port) => {
     if (err) throw err;
     options.port = port;
-    startDevServer(webpackOptions, options);
+    startDevServer(wpOpt, options);
   });
 }
 
